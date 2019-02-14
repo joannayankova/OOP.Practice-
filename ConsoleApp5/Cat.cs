@@ -12,8 +12,6 @@ namespace ConsoleApp5
         {
 
         }
-
-
         public override void MakeSound()
         {
             base.MakeSound();

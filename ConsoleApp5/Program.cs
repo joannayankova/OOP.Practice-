@@ -16,7 +16,10 @@ namespace ConsoleApp5
             animals.Add(new Frog (7, "John", "male"));
             animals.Add(new Kitty(8, "Sue", "female"));
 
-            animals[2].MakeSound();
+            foreach (var sound in animals)
+            {
+                sound.MakeSound();
+            }
         }
     }
 }

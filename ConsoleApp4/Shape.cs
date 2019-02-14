@@ -15,10 +15,7 @@ namespace ConsoleApp4
             this.height = height;
         }
         public abstract double CalculateSurface();
-
         public double height;
         public double width;
-
-
     }
 }
