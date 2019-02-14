@@ -16,15 +16,13 @@ namespace ConsoleApp2
 
         public Student(double mark, string fname, string lname) : base(fname, lname)
         {
+            if(mark>=2&&mark<=6)
             this.Mark = mark;
         }
 
         public int CompareTo(Student student)
         {
-
-
             return this.Mark.CompareTo(student.Mark);
-
         }
     }
 

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp4
 {
-    internal class Circle : Shape
+    public class Circle : Shape
     {
-        double radius;
+        public double Radius { get; private set; }
 
         public Circle(double radius) : base()
         {

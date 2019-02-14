@@ -10,9 +10,6 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            //Employee employee = new Employee("Ivan", "Draganov", 1500, 160);
-           
-
             List<Student> Students = new List <Student> () {
                 new Student(5.50, "marin", "marinov"),
                 new Student(3, "sda", "asd"),
@@ -35,39 +32,21 @@ namespace ConsoleApp2
                 new Employee("marin", "marinov",3500,150),
                 new Employee("marin", "marinov",8500,150),
                 };
-            Students.Sort();
 
+            Students.Sort();
             Employees.Sort();
+
             foreach (Employee employee in Employees)
             {
-                Console.WriteLine(employee._wage);
+                Console.WriteLine(employee.Wage);
             }
-
-            //Student temp;
-
-            //for (int i = 0; i < Students.Length - 1; i++)
-            //{
-            //    for (int j = 0; j < Students.Length - i - 1; j++)
-            //    {
-            //        if (Students[j] > Students[j + 1])
-            //        {
-            //            temp = Students[j];
-            //            Students[j] = Students[j + 1];
-            //            Students[j + 1] = temp;
-
-            //        }
-
-            //    }
-            //}
-
-
 
             foreach (Student mark in Students)
             {
                 Console.WriteLine(mark.Mark);
             }
+
             Console.ReadLine();
         }
-
     }
 }

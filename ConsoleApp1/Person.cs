@@ -10,14 +10,13 @@ namespace ConsoleApp1
     {
         public Person(string fname, string lname)
         {
-            this.Fname = fname;
-            this.Lname = lname;
+            if (fname is null) throw new ArgumentNullException(nameof(fname));
+            if (lname is null) throw new ArgumentNullException(nameof(fname));
+            this.Firstname = fname;
+            this.LastName = lname;
         }
-
-        public string Fname { get; set; }
-        public string Lname { get; set; }
-
-
+        public string Firstname { get; set; }
+        public string LastName { get; set; }
     }
 }
 

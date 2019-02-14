@@ -8,7 +8,7 @@ namespace ConsoleApp2
 {
     public class Employee : Human, IComparable<Employee>
     {
-        public int _wage { get; private set; }
+        public int Wage{ get; private set; }
         
         public int WorkingHours { get; set; }
 
@@ -18,19 +18,19 @@ namespace ConsoleApp2
 
         public Employee(string fname, string lname,int wage, int workingHours) : base(fname, lname)
         {
-            this._wage = wage;
+            this.Wage = wage;
             this.WorkingHours = workingHours;
         }
 
         public double CalculateHourlyWage ()
         {
-            double HourlyWage = (double)(this._wage / this.WorkingHours);
+            double HourlyWage = (double)(this.Wage / this.WorkingHours);
             return HourlyWage;
         }
 
         public int CompareTo(Employee other)
         {
-            return other._wage.CompareTo(this._wage);
+            return other.Wage.CompareTo(this.Wage);
         }
     }
 }
