@@ -10,23 +10,24 @@ namespace ConsoleApp6
     {
         public DepositAccount(CustomerType custumerType, double interestRate) : base(custumerType, interestRate)
         {
+
         }
 
-        //public double CalculateInterestRate(int mounths, double interestRate)
-        //{
-        //    if (this.Balance > 0 && this.Balance < 1000)
-        //    {
-        //        return mounths * interestRate;
-        //    }
-        //    else
-        //        return 0;
-        //}
-
-        public void Withdraw(double amoun)
+        public override double CalculateInterest(int months)
         {
-            if (amoun > this.Balance) throw new BalanceException("Not enough balance");
+            if (this.Balance > 0 && this.Balance < 1000)
+            {
+               return base.CalculateInterest(months);
+            }
+            else
+                return 0;
+        }
 
-            Balance -= amoun;
+        public void Withdraw(double ammount)
+        {
+            if (ammount > this.Balance) throw new BalanceException("Not enough balance");
+
+            Balance -= ammount;
         }
     }
 }

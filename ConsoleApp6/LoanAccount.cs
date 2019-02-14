@@ -14,7 +14,7 @@ namespace ConsoleApp6
 
         public override double CalculateInterest(int months)
         {
-            switch (this.CostumerType)
+            switch (this.CustumerType)
             {
                 case CustomerType.Company:
                     {
@@ -24,15 +24,16 @@ namespace ConsoleApp6
                         }
 
                         return 0;
+                       
                     }
-                //case CostumerType.Individual:
-                //    {
-                //        if (months > 3)
-                //        {
-                //            this.Interest_rate = (this.Balance * interestRate);
-                //        }
-                //        return this.Interest_rate;
-                //    }
+                case CustomerType.Individual:
+                    {
+                        if (months > 3)
+                        {
+                            return base.CalculateInterest(months);
+                        }
+                        return 0;
+                    }
 
                 default:
                     throw new Exception("Please first initialize type of the client");

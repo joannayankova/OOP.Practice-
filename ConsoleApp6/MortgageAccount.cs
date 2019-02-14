@@ -7,34 +7,30 @@ namespace ConsoleApp6
 {
     public class MortgageAccount : Account, ICanDeposit
     {
-        public MortgageAccount(CustomerType costumerType, double interestRate) : base(costumerType, interestRate)
+        public MortgageAccount(CustomerType custumerType, double interestRate) : base(custumerType, interestRate)
         {
         }
 
-        public override double CalculateInterestRate(int mounths, double interestRate)
+        public override double CalculateInterest(int months)
         {
-            switch (this.Costumer)
+            switch (this.CustumerType)
             {
-                case CostumerType.Company:
+                case CustomerType.Company:
                     {
-                        if (mounths < 12)
+                        if (months < 12)
                         {
-                            this.Interest_rate = ((mounths * interestRate) / 2);
+                            return base.CalculateInterest(months)/2;
                         }
                         else
-                        {
-                            this.Interest_rate = (mounths * interestRate);
-                        }
-                        return this.Interest_rate;
-
+                            return base.CalculateInterest(months);
                     }
-                case CostumerType.Individual:
+                case CustomerType.Individual:
                     {
-                        if (mounths > 6)
+                        if (months > 6)
                         {
-                            this.Interest_rate = (this.Balance * interestRate);
+                            return base.CalculateInterest(months);
                         }
-                        return this.Interest_rate;
+                        return 0;
                     }
 
                 default:

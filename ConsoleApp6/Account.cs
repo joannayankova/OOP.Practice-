@@ -4,7 +4,7 @@
     {
         public Account(CustomerType costumerType, double interestRate)
         {
-            CostumerType = costumerType;
+            CustumerType = costumerType;
             InterestRate = interestRate;
         }
 
@@ -12,7 +12,7 @@
 
         public double InterestRate { get; private set; }
 
-        public CustomerType CostumerType { get; private set; }
+        public CustomerType CustumerType { get; private set; }
 
         public virtual double CalculateInterest(int mounths)
         {
