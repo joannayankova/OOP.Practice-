@@ -42,17 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="balanceException.cs" />
-    <Compile Include="Deposit.cs" />
-    <Compile Include="enums.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="BalanceException.cs" />
+    <Compile Include="Bank.cs" />
+    <Compile Include="CustomerType.cs" />
+    <Compile Include="DepositAccount.cs" />
     <Compile Include="IAccount.cs" />
-    <Compile Include="Loan.cs" />
-    <Compile Include="Mortgage.cs" />
+    <Compile Include="LoanAccount.cs" />
+    <Compile Include="MortgageAccount.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

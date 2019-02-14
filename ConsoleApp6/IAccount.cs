@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp6
 {
-    public interface IAccount
+    public interface ICanDeposit
     {
+        void Deposit(double amount);
+    }
 
-        double Balance { get; }
-
-        CostumerType Costumer { get; set; }
-
-        void Depositing(double money);
-
-        double CalculateInterestRate(int mounths,double interestRate);
-
+    public interface ICanWithdraw
+    {
+        void Withdraw(double amount);
     }
 }

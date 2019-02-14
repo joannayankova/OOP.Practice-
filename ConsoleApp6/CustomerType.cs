@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp6
 {
-  public enum CostumerType
+    public enum CustomerType
     {
         Company,
-        Individual,
+        Individual
     }
 }

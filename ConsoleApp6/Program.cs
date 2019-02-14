@@ -10,38 +10,40 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
-            List<IAccount> Accounts = new List<IAccount>();
+            var bank = new Bank();
 
-            Mortgage account1 = new Mortgage(CostumerType.Company);
-            Loan account2 = new Loan(CostumerType.Individual);
-            Deposit account3 = new Deposit(CostumerType.Individual);
+            //List<IAccount> Accounts = new List<IAccount>();
 
-            Accounts.Add(account1);
+            //MortgageAccount account1 = new MortgageAccount(CostumerType.Company);
+            //LoanAccount account2 = new LoanAccount(CostumerType.Individual);
+            //DepositAccount account3 = new DepositAccount(CostumerType.Individual);
 
-            Accounts.Add(account2);
+            //Accounts.Add(account1);
 
-            Accounts.Add(account3);
+            //Accounts.Add(account2);
 
-            account1.Depositing(3000);
+            //Accounts.Add(account3);
 
-            account2.Depositing(6000);
+            //account1.Deposit(3000);
 
-            account3.Depositing(12000);
+            //account2.Deposit(6000);
 
-            try
-            {
-                account3.WithDrawing(30000);
-            }
-            catch(BalanceException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            //account3.Deposit(12000);
 
-            account1.CalculateInterestRate(6, 0.2);
+            //try
+            //{
+            //    account3.Withdraw(30000);
+            //}
+            //catch (BalanceException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
 
-            account2.CalculateInterestRate(2, 0.5);
+            //account1.CalculateInterestRate(6, 0.2);
 
-            account3.CalculateInterestRate(5, 0.8);
+            //account2.CalculateInterestRate(2, 0.5);
+
+            //account3.CalculateInterestRate(5, 0.8);
 
 
         }
