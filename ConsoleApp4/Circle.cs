@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp4
+﻿namespace ConsoleApp4
 {
     public class Circle : Shape
     {
@@ -12,12 +6,12 @@ namespace ConsoleApp4
 
         public Circle(double radius) : base()
         {
-          this.radius=radius;
+          this.Radius=radius;
         }
        
         public override double CalculateSurface()
         {
-            return this.radius * this.radius;
+            return this.Radius * this.Radius;
         }
     }
 }
