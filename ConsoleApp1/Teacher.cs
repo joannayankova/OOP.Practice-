@@ -14,12 +14,16 @@ namespace ConsoleApp1
 
         public void AddCourse(Course course)
         {
+            if (course is null) throw new ArgumentNullException(nameof(course));
             Courses.Add(course);
         }
 
         public void ShowCourses()
         {
-            Console.WriteLine(this.Courses.Count);
+           foreach(var courses in Courses)
+            {
+                Console.WriteLine(courses.Name);
+            }
         }
 
     }

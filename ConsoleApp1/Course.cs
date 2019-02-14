@@ -8,13 +8,14 @@ namespace ConsoleApp1
 {
     public class Course
     {
-        public string idName { get; set; }
-       
-        public Course(string  idName)
+        public Course(string name,int countExercises)
         {
-            this.idName = idName;
+            Name = name;
+            CountOfExercises = countExercises;
         }
-
-       
-   }
+   
+        public string Name { get; set; }
+        public int CountOfExercises{ get; private set; }
+        public int CountOfClases { get; private set; }
+    }
 }

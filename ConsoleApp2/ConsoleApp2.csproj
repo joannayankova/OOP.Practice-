@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompareTo.cs" />
     <Compile Include="Employe.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Program.cs" />

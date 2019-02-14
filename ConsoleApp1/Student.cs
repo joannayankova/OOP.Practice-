@@ -8,21 +8,15 @@ namespace ConsoleApp1
 {
     public class Student : Person
     {
-        private int _id { get; set; }
+        public int Id { get; private set; }
 
         public Student(string fname, string lname) : base(fname, lname)
         {
 
         }
-
         public Student(string fname,string lname,int id):base(fname,lname)
         {
-            this._id = id;
+           Id = id;
         }
-
-
-
-
-
     }
 }
