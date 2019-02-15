@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-  public class School
+    public class School
     {
         public School(List<Class> classes)
         {
+            if (ReferenceEquals(null, classes) || classes.Count == 0) throw new ArgumentNullException(nameof(classes));
+
+            //??
             Classes = classes;
         }
 

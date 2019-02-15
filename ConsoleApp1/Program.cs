@@ -7,26 +7,39 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Teacher Ivan = new Teacher("Ivan", "georgiev");
-            Ivan.AddCourse(new Course("math",7));
+            Teacher ivanka = new Teacher("Ivanka", "georgiev");
+            Teacher asdf = new Teacher("", "");
+            Teacher fadfd = new Teacher("  ", "  ");
+            Teacher fgasfadf = new Teacher("123123asdfsa  ", "222  ");
+            Teacher fasdfasdf = new Teacher(null, null);
 
-            List<Teacher> teachersClass1 = new List<Teacher>();
+            ivanka.Teach(new Course("math", 7));
 
-            teachersClass1.Add(Ivan);
-            teachersClass1.Add(new Teacher("Gerogi", "Ivanov"));
+            List<Teacher> teachers = new List<Teacher>();
 
-            List<Student> studentsClass1 = new List<Student>();
-            studentsClass1.Add(new Student("Georgi", "Georgiev"));
-            studentsClass1.Add(new Student("Ivan", "Ivanov"));
+            teachers.Add(ivanka);
+            teachers.Add(new Teacher("Gerogi", "Ivanov"));
 
-            Class newclass1 = new Class(studentsClass1,teachersClass1);
-            Class newclass2 = new Class(studentsClass1, teachersClass1);
+            List<Student> students = new List<Student>();
+            students.Add(new Student("Georgi", "Georgiev"));
+            students.Add(new Student("Ivan", "Ivanov"));
+
+            Class newclass1 = new Class(students, teachers);
+            Class newclass2 = new Class(students, teachers);
 
             School School = new School(new List<Class> { newclass1, newclass2 });
-            Ivan.ShowCourses();
-            Console.WriteLine(studentsClass1[1].Firstname);
-            Console.ReadLine();
+            ShowTeacherCourses(ivanka);
 
+            Console.WriteLine(students[1].Firstname);
+            Console.ReadLine();
+        }
+
+        static void ShowTeacherCourses(Teacher teacher)
+        {
+            foreach (var courses in teacher.Courses)
+            {
+                Console.WriteLine(courses.Name);
+            }
         }
     }
 }

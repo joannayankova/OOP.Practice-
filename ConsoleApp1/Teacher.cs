@@ -7,25 +7,16 @@ namespace ConsoleApp1
     {
         public List<Course> Courses { get; private set; }
 
-        public Teacher(string fname, string lname) : base(fname, lname)
+        public Teacher(string firstName, string lastName) : base(firstName, lastName)
         {
-            this.Courses = new List<Course>();
+            Courses = new List<Course>();
         }
 
-        public void AddCourse(Course course)
+        public void Teach(Course course)
         {
             if (course is null) throw new ArgumentNullException(nameof(course));
+
             Courses.Add(course);
         }
-
-        public void ShowCourses()
-        {
-           foreach(var courses in Courses)
-            {
-                Console.WriteLine(courses.Name);
-            }
-        }
-
     }
 }
-

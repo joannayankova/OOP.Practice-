@@ -10,39 +10,15 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
-            List<IAccount> Accounts = new List<IAccount>();
+            var bank = new Bank();
+            bank.OpenDepositAccount(CustomerType.Individual);
+            bank.OpenLoanAccount(CustomerType.Company);
+            bank.OpenMortgageAccount(CustomerType.Individual);
 
-            Mortgage account1 = new Mortgage(CostumerType.Company);
-            Loan account2 = new Loan(CostumerType.Individual);
-            Deposit account3 = new Deposit(CostumerType.Individual);
-
-            Accounts.Add(account1);
-
-            Accounts.Add(account2);
-
-            Accounts.Add(account3);
-
-            account1.Depositing(3000);
-
-            account2.Depositing(6000);
-
-            account3.Depositing(12000);
-
-            try
+         foreach(var account in bank.Accounts)
             {
-                account3.WithDrawing(30000);
+                Console.WriteLine(account.CalculateInterest(4));
             }
-            catch(BalanceException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            account1.CalculateInterestRate(6, 0.2);
-
-            account2.CalculateInterestRate(2, 0.5);
-
-            account3.CalculateInterestRate(5, 0.8);
-
 
         }
     }
